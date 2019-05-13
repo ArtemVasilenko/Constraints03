@@ -1,18 +1,31 @@
-//
-//  ViewController.swift
-//  Constraints03
-//
-//  Created by Артем on 5/13/19.
-//  Copyright © 2019 Артем. All rights reserved.
-//
+// VFL
 
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let redView: UIView = {
+        let myView = UIView()
+        myView.backgroundColor = .red
+        myView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return myView
+    }()
+    
+    let blueView: UIView = {
+        let myView = UIView()
+        myView.backgroundColor = .blue
+        myView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return myView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.view.addSubview(redView)
+        self.view.addSubview(blueView)
+        
+    
     }
 
 
